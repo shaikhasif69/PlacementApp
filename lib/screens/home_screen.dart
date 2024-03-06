@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
+import '../widgets/quizz_topic.dart';
 import '../widgets/student_data.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -93,7 +94,11 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                            QuizzTopics(),
+                            ));
+                          },
                           icon: 'assets/icons/quiz.svg',
                           title: 'Take Quiz',
                         ),
@@ -104,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                             //     context, AssignmentScreen.routeName);
                           },
                           icon: 'assets/icons/assignment.svg',
-                          title: 'Assignments',
+                          title: 'Resources',
                         ),
                       ],
                     ),
@@ -122,7 +127,7 @@ class HomeScreen extends StatelessWidget {
                         HomeCard(
                           onPress: () {},
                           icon: 'assets/icons/timetable.svg',
-                          title: 'Placement Table',
+                          title: 'Calendar',
                         ),
                       ],
                     ),
