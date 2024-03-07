@@ -9,38 +9,35 @@ class QuizzTopics extends StatelessWidget {
   const QuizzTopics({super.key});
 
   @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     appBar: AppBar(
-  //       backgroundColor: Colors.deepPurple,
-  //       title: Text("Topics"),
-  //       actions: [
-  //         IconButton(
-  //             onPressed: () {},
-  //             icon: Icon(
-  //               FontAwesomeIcons.circleUser,
-  //               color: Colors.pink[400],
-  //             ))
-  //       ],
-  //     ),
-  //     drawer: TopicDrawer(topics: topics),
-  //   );
-  // }
   Widget build(BuildContext context) {
-    return FutureBuilder(
+    return FutureBuilder<List<Topic>?>(
       future: fetchTopics(),
       builder: (BuildContext context, AsyncSnapshot<List<Topic>?> snap) {
         if (snap.connectionState == ConnectionState.waiting) {
-          return Text("fuck you!"); // Return a loading indicator
+          return Stack(
+            children: [
+              // Your blurred background
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                color: Colors.black.withOpacity(0.5), // Adjust opacity as needed
+              ),
+              Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.deepPurple),
+                ),
+              ),
+            ],
+          );
         } else if (snap.hasError) {
-          print("m i still getting print ?");
-          print('Error: ${snap.error}');
+          print("Error: ${snap.error}");
           return Center(
             child: Text(
-                'Error fetching data ${snap.error}'), // Handle error if data fetching fails
+              'Error fetching data ${snap.error}', // Handle error if data fetching fails
+            ),
           );
         } else if (snap.hasData) {
-          print("hurrraaaay working !");
+          print("Data fetched successfully!");
           print(snap.data);
           List<Topic> topics = snap.data ?? [];
           return Scaffold(
@@ -49,8 +46,7 @@ class QuizzTopics extends StatelessWidget {
               title: Text('Topics'),
               actions: [
                 IconButton(
-                  icon: Icon(FontAwesomeIcons.userCircle,
-                      color: Colors.pink[200]),
+                  icon: Icon(FontAwesomeIcons.userCircle, color: Colors.pink[200]),
                   onPressed: () => Navigator.pushNamed(context, '/profile'),
                 )
               ],
@@ -71,7 +67,6 @@ class QuizzTopics extends StatelessWidget {
     );
   }
 }
-
 class TopicItem extends StatelessWidget {
   final Topic topic;
   const TopicItem({required this.topic});
