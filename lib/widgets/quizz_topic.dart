@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shah_anchor_app/services/api_calls.dart';
 
 import '../models/topics.dart';
+import '../screens/quiz_question.dart';
 
 class QuizzTopics extends StatelessWidget {
   const QuizzTopics({super.key});
@@ -129,11 +130,10 @@ class TopicItem extends StatelessWidget {
   }
 }
 
-
 class TopicScreen extends StatelessWidget {
   final Topic topic;
 
-  TopicScreen({ required this.topic});
+  TopicScreen({required this.topic});
 
   @override
   Widget build(BuildContext context) {
@@ -164,6 +164,7 @@ class QuizList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("this is topic: " + topic.id.toString());
     return Column(
         children: topic.quizzes.map((quiz) {
       return Card(
@@ -172,11 +173,13 @@ class QuizList extends StatelessWidget {
         margin: EdgeInsets.all(4),
         child: InkWell(
           onTap: () {
-            // Navigator.of(context).push(
-            //   MaterialPageRoute(
-            //     builder: (BuildContext context) => QuizScreen(quizId: quiz.id),
-            //   ),
-            // );
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) => QuizzQuestions(
+                  data: topic,
+                ),
+              ),
+            );
           },
           child: Container(
             padding: EdgeInsets.all(8),

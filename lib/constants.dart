@@ -14,6 +14,7 @@ import 'package:sizer/sizer.dart';
 
   //default value
   const kDefaultPadding = 20.0;
+  const KanotherPadding = 10.0;
 
   const sizedBox = SizedBox(
     height: kDefaultPadding,

@@ -1,299 +1,119 @@
 [
-    {
-      "id": "1",
-      "title": "Apptitude Test 1",
-      "description": "Description for Apptitude Test 1",
-      "img": "topic1.png",
-      "quizzes": [
-        {
-          "id": "1",
-          "title": "Quiz 1",
-          "description": "Description for Quiz 1",
-          "video": "quiz1.mp4",
-          "topic": "1",
-          "questions": [
-            {
-              "id": "1",
-              "text": "Question 1",
-              "options": [
-                {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-              ]
-            },
-            {
-              "id": "2",
-              "text": "Question 2",
-              "options": [
-                {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-        "id": "1",
-        "title": "Apptitude Test 1",
-        "description": "Description for Apptitude Test 1",
-        "img": "topic1.png",
-        "quizzes": [
-          {
-            "id": "1",
-            "title": "Quiz 1",
-            "description": "Description for Quiz 1",
-            "video": "quiz1.mp4",
-            "topic": "1",
-            "questions": [
-              {
-                "id": "1",
-                "text": "Question 1",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              },
-              {
-                "id": "2",
-                "text": "Question 2",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              }
-            ]
-          }
-        ]
-      },
+  {
+    "id": "1",
+    "title": "Topic 1",
+    "description": "Description for Topic 1",
+    "img": "topic1.png",
+    "quizzes": [
       {
         "id": "1",
-        "title": "Apptitude Test 1",
-        "description": "Description for Apptitude Test 1",
-        "img": "topic1.png",
-        "quizzes": [
+        "title": "Aptitude Test",
+        "description": "Test your aptitude skills with these questions",
+        "video": "aptitude_test.mp4",
+        "topic": "1",
+        "questions": [
           {
             "id": "1",
-            "title": "Quiz 1",
-            "description": "Description for Quiz 1",
-            "video": "quiz1.mp4",
-            "topic": "1",
-            "questions": [
-              {
-                "id": "1",
-                "text": "Question 1",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              },
-              {
-                "id": "2",
-                "text": "Question 2",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              }
+            "text": "What is the next number in the series: 2, 5, 10, 17, ___?",
+            "options": [
+              {"value": "21", "detail": "", "correct": false},
+              {"value": "24", "detail": "", "correct": true},
+              {"value": "28", "detail": "", "correct": false},
+              {"value": "32", "detail": "", "correct": false}
             ]
-          }
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Apptitude Test 1",
-        "description": "Description for Apptitude Test 1",
-        "img": "topic1.png",
-        "quizzes": [
+          },
           {
-            "id": "1",
-            "title": "Quiz 1",
-            "description": "Description for Quiz 1",
-            "video": "quiz1.mp4",
-            "topic": "1",
-            "questions": [
-              {
-                "id": "1",
-                "text": "Question 1",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              },
-              {
-                "id": "2",
-                "text": "Question 2",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              }
+            "id": "2",
+            "text": "If a car travels 60 miles in 1 hour, how many miles will it travel in 3 hours?",
+            "options": [
+              {"value": "120", "detail": "", "correct": false},
+              {"value": "150", "detail": "", "correct": true},
+              {"value": "180", "detail": "", "correct": false},
+              {"value": "210", "detail": "", "correct": false}
             ]
-          }
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Apptitude Test 1",
-        "description": "Description for Apptitude Test 1",
-        "img": "topic1.png",
-        "quizzes": [
+          },
           {
-            "id": "1",
-            "title": "Quiz 1",
-            "description": "Description for Quiz 1",
-            "video": "quiz1.mp4",
-            "topic": "1",
-            "questions": [
-              {
-                "id": "1",
-                "text": "Question 1",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              },
-              {
-                "id": "2",
-                "text": "Question 2",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              }
+            "id": "3",
+            "text": "Simplify: (4 + 7) * 3 - 5",
+            "options": [
+              {"value": "35", "detail": "", "correct": false},
+              {"value": "40", "detail": "", "correct": true},
+              {"value": "45", "detail": "", "correct": false},
+              {"value": "50", "detail": "", "correct": false}
             ]
-          }
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Apptitude Test 1",
-        "description": "Description for Apptitude Test 1",
-        "img": "topic1.png",
-        "quizzes": [
+          },
           {
-            "id": "1",
-            "title": "Quiz 1",
-            "description": "Description for Quiz 1",
-            "video": "quiz1.mp4",
-            "topic": "1",
-            "questions": [
-              {
-                "id": "1",
-                "text": "Question 1",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              },
-              {
-                "id": "2",
-                "text": "Question 2",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              }
+            "id": "4",
+            "text": "What is the square root of 144?",
+            "options": [
+              {"value": "10", "detail": "", "correct": false},
+              {"value": "12", "detail": "", "correct": true},
+              {"value": "14", "detail": "", "correct": false},
+              {"value": "16", "detail": "", "correct": false}
             ]
-          }
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Apptitude Test 1",
-        "description": "Description for Apptitude Test 1",
-        "img": "topic1.png",
-        "quizzes": [
+          },
           {
-            "id": "1",
-            "title": "Quiz 1",
-            "description": "Description for Quiz 1",
-            "video": "quiz1.mp4",
-            "topic": "1",
-            "questions": [
-              {
-                "id": "1",
-                "text": "Question 1",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              },
-              {
-                "id": "2",
-                "text": "Question 2",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              }
+            "id": "5",
+            "text": "If x + 5 = 12, what is the value of x?",
+            "options": [
+              {"value": "5", "detail": "", "correct": false},
+              {"value": "7", "detail": "", "correct": true},
+              {"value": "10", "detail": "", "correct": false},
+              {"value": "15", "detail": "", "correct": false}
             ]
-          }
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Apptitude Test 1",
-        "description": "Description for Apptitude Test 1",
-        "img": "topic1.png",
-        "quizzes": [
+          },
           {
-            "id": "1",
-            "title": "Quiz 1",
-            "description": "Description for Quiz 1",
-            "video": "quiz1.mp4",
-            "topic": "1",
-            "questions": [
-              {
-                "id": "1",
-                "text": "Question 1",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": true},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": false},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              },
-              {
-                "id": "2",
-                "text": "Question 2",
-                "options": [
-                  {"value": "Option A", "detail": "Detail for Option A", "correct": false},
-                  {"value": "Option B", "detail": "Detail for Option B", "correct": true},
-                  {"value": "Option C", "detail": "Detail for Option C", "correct": false},
-                  {"value": "Option D", "detail": "Detail for Option D", "correct": false}
-                ]
-              }
+            "id": "6",
+            "text": "A train travels 150 miles in 2 hours. What is its speed in miles per hour?",
+            "options": [
+              {"value": "60", "detail": "", "correct": false},
+              {"value": "75", "detail": "", "correct": true},
+              {"value": "90", "detail": "", "correct": false},
+              {"value": "105", "detail": "", "correct": false}
+            ]
+          },
+          {
+            "id": "7",
+            "text": "If 3x - 5 = 16, what is the value of x?",
+            "options": [
+              {"value": "5", "detail": "", "correct": false},
+              {"value": "7", "detail": "", "correct": true},
+              {"value": "8", "detail": "", "correct": false},
+              {"value": "10", "detail": "", "correct": false}
+            ]
+          },
+          {
+            "id": "8",
+            "text": "What is the sum of the first 10 prime numbers?",
+            "options": [
+              {"value": "129", "detail": "", "correct": false},
+              {"value": "225", "detail": "", "correct": false},
+              {"value": "315", "detail": "", "correct": true},
+              {"value": "402", "detail": "", "correct": false}
+            ]
+          },
+          {
+            "id": "9",
+            "text": "If a shirt costs $20 after a 25% discount, what was its original price?",
+            "options": [
+              {"value": "$15", "detail": "", "correct": false},
+              {"value": "$25", "detail": "", "correct": false},
+              {"value": "$26.67", "detail": "", "correct": true},
+              {"value": "$30", "detail": "", "correct": false}
+            ]
+          },
+          {
+            "id": "10",
+            "text": "The perimeter of a rectangle is 40 cm, and its length is 12 cm. What is its width?",
+            "options": [
+              {"value": "6 cm", "detail": "", "correct": false},
+              {"value": "8 cm", "detail": "", "correct": true},
+              {"value": "10 cm", "detail": "", "correct": false},
+              {"value": "14 cm", "detail": "", "correct": false}
             ]
           }
         ]
       }
-  ]
-  
+    ]
+  }
+]

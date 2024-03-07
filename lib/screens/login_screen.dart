@@ -1,10 +1,12 @@
 import 'package:shah_anchor_app/components/custom_buttons.dart';
 import 'package:shah_anchor_app/constants.dart';
-// import 'package:brain_school/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shah_anchor_app/screens/dashboard.dart';
 import 'package:sizer/sizer.dart';
 
+import '../models/users.dart';
+import '../services/api_calls.dart';
+import '../services/authentication.dart';
 import 'home_screen.dart';
 
 late bool _passwordVisible;
@@ -17,7 +19,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  //validate our form now
+  final emailController = TextEditingController();
+
+  final passwordController = TextEditingController(); //validate our form now
   final _formKey = GlobalKey<FormState>();
 
   //changes current state
@@ -34,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
       //when user taps anywhere on the screen, keyboard hides
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
-        backgroundColor:kPrimaryColor,
+        backgroundColor: kPrimaryColor,
         body: Column(
           children: [
             Container(
@@ -43,14 +47,34 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SizedBox(height: 50,),
-                    Image.asset(
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Image.asset(
                     'assets/images/collegePlacement.png',
                     height: 20.h,
                     width: 60.w,
                   ),
-                  Row(mainAxisAlignment: MainAxisAlignment.center,children: [Text("Hi", style: TextStyle(fontSize: 24),), Text(" Students!", style: TextStyle(fontWeight: FontWeight.w800, fontSize: 26, color: Colors.white),)],),
-                  Text("Sign in to continue", style: TextStyle(color: Colors.white.withOpacity(0.8)),),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Hi",
+                        style: TextStyle(fontSize: 24),
+                      ),
+                      Text(
+                        " Students!",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 26,
+                            color: Colors.white),
+                      )
+                    ],
+                  ),
+                  Text(
+                    "Sign in to continue",
+                    style: TextStyle(color: Colors.white.withOpacity(0.8)),
+                  ),
                   // Column(
                   //   mainAxisAlignment: MainAxisAlignment.end,
                   //   crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   //     sizedBox,
                   //   ],
                   // ),
-                
+
                   SizedBox(
                     height: kDefaultPadding / 2,
                   ),
@@ -74,24 +98,40 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 padding: EdgeInsets.only(left: 10.w, right: 10.w),
                 decoration: BoxDecoration(
-                  color: kOtherColor,
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60))
-                ),
+                    color: kOtherColor,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(60),
+                        topRight: Radius.circular(60))),
                 child: Form(
                   key: _formKey,
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
                         sizedBox,
-                        SizedBox(height: 30,),
+                        SizedBox(
+                          height: 30,
+                        ),
                         buildEmailField(),
                         sizedBox,
                         buildPasswordField(),
                         sizedBox,
                         DefaultButton(
-                          onPress: () {
+                          onPress: () async {
+                            fetchTopics();
                             if (_formKey.currentState!.validate()) {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                               UserData? userData = await Authentication.loginUser(
+                                    emailController.text,
+                                    passwordController.text,
+                                  );
+                                  print(userData);
+                                  if (userData != null) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => HomeScreen(),
+                                      ),
+                                    );
+                                  }
                             }
                           },
                           title: 'SIGN IN',
@@ -143,6 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
           return 'Please enter a valid email address';
         }
       },
+      controller: emailController,
     );
   }
 
@@ -174,6 +215,7 @@ class _LoginScreenState extends State<LoginScreen> {
           return 'Must be more than 5 characters';
         }
       },
+      controller: passwordController,
     );
   }
 }

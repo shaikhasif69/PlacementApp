@@ -95,15 +95,13 @@ class StudentDataCard extends StatelessWidget {
           children: [
             Text(
               title,
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: kTextBlackColor,
                   ),
             ),
             Text(
               value,
-              style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                    color: kTextLightColor,
-                  ),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: Colors.black.withOpacity(0.6))
             ),
           ],
         ),
