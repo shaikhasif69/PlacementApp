@@ -26,6 +26,7 @@ class AppText extends StatelessWidget {
         fontWeight: fontWeight,
         color: color,
       ),
+      maxLines: 4,
     );
   }
 }

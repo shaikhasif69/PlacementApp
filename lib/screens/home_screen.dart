@@ -7,11 +7,13 @@ import 'package:sizer/sizer.dart';
 import '../models/placement.dart';
 import '../services/api_calls.dart';
 import '../widgets/quizz_topic.dart';
+import '../widgets/splash_screen.dart';
 import '../widgets/student_data.dart';
 import 'calendar_page.dart';
 import 'placement_page.dart';
 import '../models/users.dart';
 import 'resource_uploadscreen.dart';
+import 'submit_resume.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -201,7 +203,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: 'Ask',
                         ),
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> UploadResume()));
+                          },
                           icon: 'assets/icons/resume.svg',
                           title: 'Submit\nResume',
                         ),
@@ -219,7 +223,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: 'DateSheet',
                         ),
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SplashScreen()));
+                          },
                           icon: 'assets/icons/logout.svg',
                           title: 'Logout',
                         ),

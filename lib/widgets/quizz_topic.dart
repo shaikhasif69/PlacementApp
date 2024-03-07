@@ -87,32 +87,26 @@ class TopicItem extends StatelessWidget {
               );
             },
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(
-                  'assets/covers/${topic.img}',
+                  'assets/images/apptitude2.png',
                   height: 120,
                   width: 80,
                   fit: BoxFit.contain,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.only(left: 10, right: 10),
-                        child: Text(
-                          topic.title,
-                          style: TextStyle(
-                              height: 1.5, fontWeight: FontWeight.bold),
-                          overflow: TextOverflow.fade,
-                          softWrap: false,
-                        ),
-                      ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10, right: 10),
+                    child: Text(
+                      topic.title,
+                      style: TextStyle(
+                          height: 1.5, fontWeight: FontWeight.bold),
+                      overflow: TextOverflow.fade,
+                      softWrap: false,
                     ),
-                    // Text(topic.description)
-                  ],
+                  ),
                 ),
                 // )
                 // TopicProgress(topic: topic),
@@ -136,19 +130,24 @@ class TopicScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      body: ListView(children: [
-        Hero(
-          tag: topic.img,
-          child: Image.asset('assets/covers/${topic.img}',
-              width: MediaQuery.of(context).size.width),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView(children: [
+            Hero(
+              tag: topic.img,
+              child: Image.asset('assets/images/apptitude.png',
+                  width: MediaQuery.of(context).size.width),
+            ),
+            Text(
+              topic.title,
+              style:
+                  TextStyle(height: 2, fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            QuizList(topic: topic)
+          ]),
         ),
-        Text(
-          topic.title,
-          style:
-              TextStyle(height: 2, fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        QuizList(topic: topic)
-      ]),
+      ),
     );
   }
 }

@@ -113,7 +113,7 @@ class _PlacementPageState extends State<PlacementPage> {
                               children: [
                                 Container(
                                   child: Image.asset(
-                                    "assets/covers/topic1.png",
+                                    "assets/images/company.png",
                                     height: 80,
                                     width: 80,
                                   ),
@@ -132,7 +132,7 @@ class _PlacementPageState extends State<PlacementPage> {
                                   height: 10,
                                 ),
                                 Text(
-                                  "55 Videos",
+                                 widget.placementItems[0].company.companyId,
                                   style: TextStyle(
                                       fontSize: 15,
                                       color: Colors.black.withOpacity(.6)),

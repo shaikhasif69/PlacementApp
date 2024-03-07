@@ -6,7 +6,6 @@ import 'package:sizer/sizer.dart';
 import '../constants.dart';
 
 class SplashScreen extends StatefulWidget {
-  //route name for our screen
   static String routeName = 'SplashScreen';
 
   @override
@@ -38,8 +37,14 @@ class _SplashScreenState extends State<SplashScreen> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Placement', style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700)),
-                Text('Buddy', style: TextStyle(fontSize: 26, color: Colors.black.withOpacity(.6), fontWeight: FontWeight.w600)),
+                Text('Placement',
+                    style:
+                        TextStyle(fontSize: 32, fontWeight: FontWeight.w700)),
+                Text('Buddy',
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: Colors.black.withOpacity(.6),
+                        fontWeight: FontWeight.w600)),
               ],
             ),
             Image.asset(

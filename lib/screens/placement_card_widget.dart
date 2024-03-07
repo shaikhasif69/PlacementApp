@@ -93,7 +93,7 @@ class _PlacementCardWidgetState extends State<PlacementCardWidget> {
 
   Widget imageWidget() {
     return Container(
-      child: Image.asset("assets/covers/topic1.png"),
+      child: Image.asset("assets/images/company.png"),
     );
   }
 
@@ -106,7 +106,7 @@ class _PlacementCardWidgetState extends State<PlacementCardWidget> {
           color: kPrimaryColor),
       child: Center(
         child: Icon(
-          Icons.add,
+          Icons.library_add,
           color: Colors.white,
           size: 25,
         ),
